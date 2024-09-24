@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<!-- This line starts the HTML document and sets the default language to English -->
+<html lang="en">
+  <head>
+    <!-- This line specifies the character encoding used in the document -->
+    <meta charset="UTF-8" />
+
+    <!-- This line specifies the compatibility mode for Internet Explorer -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- This line sets the viewport properties for responsive web design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- This line sets the title of the webpage that appears in the browser tab -->
+    <title>Rythmic-Music Player</title>
+
+    <!-- This line links the external CSS file to style the webpage -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- This line specifies the icon used in the browser tab -->
+    <link rel="icon" type="image/x-icon" href="icon.png" />
+  </head>
+
+  <body>
+    <!-- This code block defines the navigation bar of the webpage -->
+    <nav>
+      <ul>
+        <!-- This line defines the brand logo and text -->
+        <li class="brand"><img src="logo.png" alt="Rythmic" /> Rythmic - Just Groove</li>
+      </ul>
+    </nav>
+    <!-- This code block defines the main content area of the webpage -->
+    <div class="container">
+      <div class="songList">
+        <!-- This line defines the title of the song list -->
+        <h1>BollyWood Mush</h1>
+        <!-- This code block defines the list of songs and their details -->
+        <div class="songItemContainer">
+          <div class="songItem">
+            <img  href="/covers/1.jpeg" alt="Mai Rahoo Ya Na Rahoo"/>
+            <span class="songName">Mai Rahoo Ya Na Rahoo</span>
+            <span class="songlistplay"
+              ><span class="timestamp"
+                >05:09
+                <i id="0" class="far songItemPlay fa-play-circle"></i> </span
+            ></span>
+          </div>
+          <div class="songItem">
+            <img alt="Tum Mile" />
+            <span class="songName">Tum Mile</span>
+            <span class="songlistplay"
+              ><span class="timestamp"
+                >05:43
+                <i id="1" class="far songItemPlay fa-play-circle"></i> </span
+            ></span>
+          </div>
+          <div class="songItem">
+            <img alt="Ek Pyar Ka Nagma Hai" />
+            <span class="songName">Ek Pyar Ka Nagma Hai</span>
+            <span class="songlistplay"
+              ><span class="timestamp"
+                >04:53
+                <i id="2" class="far songItemPlay fa-play-circle"></i> </span
+            ></span>
+          </div>
+          <div class="songItem">
+            <img alt="Main Pal Do Pal Ka Shair Hoon" />
+            <span class="songName">Main Pal Do Pal Ka Shair Hoon</span>
+            <span class="songlistplay"
+              ><span class="timestamp"
+                >03:24
+                <i id="3" class="far songItemPlay fa-play-circle"></i> </span
+            ></span>
+          </div>
+          <div class="songItem">
+            <img alt="Kabhi Kabhi Mere Dil Mein" />
+            <span class="songName">Kabhi Kabhi Mere Dil Mein</span>
+            <span class="songlistplay"
+              ><span class="timestamp"
+                >05:30
+                <i id="4" class="far songItemPlay fa-play-circle"></i> </span
+            ></span>
+          </div>
+          <div class="songItem">
+            <img alt="Qaafirana" />
+            <span class="songName">Qaafirana</span>
+            <span class="songlistplay"
+              ><span class="timestamp"
+                >05:41
+                <i id="5" class="far songItemPlay fa-play-circle"></i> </span
+            ></span>
+          </div>
+          <div class="songItem">
+            <img alt="O Sanam" />
+            <span class="songName">O Sanam</span>
+            <span class="songlistplay"
+              ><span class="timestamp"
+                >03:43
+                <i id="6" class="far songItemPlay fa-play-circle"></i> </span
+            ></span>
+          </div>
+          <div class="songItem">
+            <img alt="Bade Achhe Lagte Hain" />
+            <span class="songName">Bade Achhe Lagte Hain</span>
+            <span class="songlistplay"
+              ><span class="timestamp"
+                >05:12
+                <i id="7" class="far songItemPlay fa-play-circle"></i> </span
+            ></span>
+          </div>
+          <div class="songItem">
+            <img alt="Abhi Na Jao Chhod Kar" />
+            <span class="songName">Abhi Na Jao Chhod Kar</span>
+            <span class="songlistplay"
+              ><span class="timestamp"
+                >04:15
+                <i id="8" class="far songItemPlay fa-play-circle"></i> </span
+            ></span>
+          </div>
+          <div class="songItem">
+            <img alt="Hothon Se Chulo Tum" />
+            <span class="songName">Hothon Se Chulo Tum</span>
+            <span class="songlistplay"
+              ><span class="timestamp"
+                >04:54
+                <i id="9" class="far songItemPlay fa-play-circle"></i> </span
+            ></span>
+          </div>
+          <div class="songItem">
+            <img alt="Yeh Tune Kya Kiya" />
+            <span class="songName">Yeh Tune Kya Kiya</span>
+            <span class="songlistplay">
+              <span class="timestamp"
+                >05:14
+                <i id="10" class="far songItemPlay fa-play-circle"></i> </span
+            ></span>
+          </div>
+        </div>
+      </div>
+      <div class="songBanner"></div>
+    </div>
+
+    <!-- A bottom div for displaying song controls -->
+    <div class="bottom">
+      <!-- A progress bar input element -->
+      <input
+        type="range"
+        name="range"
+        id="myProgressBar"
+        min="0"
+        value="0"
+        max="100"
+      />
+      <!-- A container div for fontawesome icons -->
+      <div class="icons">
+        <!-- A fontawesome icon for previous song -->
+        <i class="fas fa-3x fa-step-backward" id="previous"></i>
+        <!-- A fontawesome icon for playing/pausing the current song -->
+        <i class="far fa-3x fa-play-circle" id="masterPlay"></i>
+        <!-- A fontawesome icon for next song -->
+        <i class="fas fa-3x fa-step-forward" id="next"></i>
+      </div>
+      <!-- A div for displaying the current song information -->
+      <div class="songInfo">
+        <!-- An image of a playing animation -->
+        <img src="playing.gif" width="42px" alt="" id="gif" />
+        <!-- The name of the currently playing song -->
+        <span id="masterSongName">Mai Rahoo Ya Na Rahoo</span>
+      </div>
+    </div>
+    <!-- A script tag for including a JavaScript file -->
+    <script src="script.js"></script>
+    <!-- A script tag for including the fontawesome icon library -->
+    <script
+      src="https://kit.fontawesome.com/26504e4a1f.js"
+      crossorigin="anonymous"
+    ></script>
+    
+    <button id="play_button"></button>
+    <button id="pause_button"></button>
+    <progress id="progress-bar" value="0" max="100"></progress>
+    <input id="volume-control" type="range" min="0" max="100" value="0">
+  </body>
+</html>
